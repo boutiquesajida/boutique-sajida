@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Sajida</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #3b0a50, #8a1a60);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 60px 20px 100px;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #ff69b4;
+      margin: 0 auto 20px;
+      animation: glowLogo 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowLogo {
+      0% { box-shadow: 0 0 10px #ff69b4; }
+      100% { box-shadow: 0 0 25px #ff69b4; }
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff69b4;
+      margin-bottom: 10px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: #fbd6e7;
+      margin-bottom: 40px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+    }
+
+    .facebook { color: #1877f2; border: 3px solid #1877f2; }
+    .instagram { color: #e1306c; border: 3px solid #e1306c; }
+    .tiktok { color: #000; border: 3px solid #000; }
+    .whatsapp { color: #25D366; border: 3px solid #25D366; }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.85em;
+      color: #fff;
+      opacity: 0.8;
+      animation: fadeIn 3s ease-in;
+    }
+
+    /* Particle background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>Boutique Sajida</h1>
+    <h2>كل روبة، حكاية جديدة. تلقايها عندنا !</h2>
+
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61578189292450" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/boutiquesajida28" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@boutiquesajida28" target="_blank" class="icon tiktok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/213674010631" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Boutique Sajida. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        color: { value: ["#ff69b4", "#ffffff"] },
+        shape: { type: "circle" },
+        opacity: { value: 0.4 },
+        size: { value: 4 },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 1.2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 60 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
